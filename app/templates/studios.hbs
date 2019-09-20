@@ -1,0 +1,40 @@
+
+{{#if model}}
+  <p>Model</p>
+{{else}}
+  <p>Model two</p>
+{{/if}}
+
+{{if model "one" "two"}}
+
+<div>
+  {{model.name}}
+
+  <ul>
+    {{#if model.services.isPending }}
+      <div>Loading...</div>
+    {{else}}
+      {{#each model.services as |service|}}
+        <li>{{service.name}} - {{service.description}}</li>
+      {{else}}
+        <li>No data</li>
+      {{/each}}
+    {{/if}}
+  </ul>
+
+  {{#each-in object as |key value|}}
+    <div>{{key}}-{{value}}</div>
+  {{/each-in}}
+
+  <ul>
+    {{#if model.places.isPending }}
+      <div>Loading...</div>
+    {{else}}
+      {{#each model.places as |place|}}
+        <li>{{place.address}}</li>
+      {{/each}}
+    {{/if}}
+  </ul>
+</div>
+
+{{outlet}}
