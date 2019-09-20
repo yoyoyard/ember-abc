@@ -6,7 +6,8 @@ export default Route.extend({
   demo: service(),
 
   model() {
-    return this.store.findRecord('studio', 10)
+    return this.store.findAll('order')
+    // return this.store.findRecord('studio', 10)
     // return this.store.findRecord('studio', 10)
     //   .then(studio => {
     //     return RSVP.all([
