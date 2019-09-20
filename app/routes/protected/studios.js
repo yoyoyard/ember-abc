@@ -6,7 +6,7 @@ export default Route.extend({
   demo: service(),
 
   model() {
-    return this.store.findAll('order')
+    return this.store.query('order', {page: 1, page_size: 20})
     // return this.store.findRecord('studio', 10)
     // return this.store.findRecord('studio', 10)
     //   .then(studio => {
