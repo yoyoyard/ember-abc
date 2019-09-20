@@ -7,7 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('studios');
+  this.route('login');
+  this.route('protected', { path: '' }, function() {
+    this.route('studios');
+    this.route('open');
+  });
 });
 
 export default Router;

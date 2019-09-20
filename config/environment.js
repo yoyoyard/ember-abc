@@ -47,5 +47,9 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: 'http://10.7.10.3:4000/api/v1/desktop_token', // Server endpoint to send authenticate request
+  };
+
   return ENV;
 };

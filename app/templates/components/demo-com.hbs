@@ -1,0 +1,19 @@
+{{log this}}
+<ul>
+  {{#each demo.goods as |good|}}
+    <li>{{good}}</li>
+  {{/each}}
+</ul>
+
+<button onclick={{action (toggle "isExpanded" this)}}>
+  {{if isExpanded "I am expanded" "I am not"}}
+</button>
+
+<button {{
+  action (mut array) (shuffle array)
+  }}>Shuffle</button>
+{{#each array as |item|}}
+  {{item}}
+{{/each}}
+
+{{yield}}

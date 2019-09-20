@@ -1,0 +1,13 @@
+<h2>Login</h2>
+
+<div>
+  <label for="username">Username:</label>
+  <Input @id="username" @type="text" @value={{name}} />
+</div>
+
+<div>
+  <label for="password">Password:</label>
+  <Input @id="password" @type="password" @value={{password}} />
+</div>
+
+<button {{action 'performLogin'}}>Login</button>
