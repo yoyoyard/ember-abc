@@ -12,11 +12,10 @@ export default Controller.extend({
       this.get('session').authenticate(authenticator, credentials).then(
         () => {
           alert('login success!');
-        },
-        () => {
-          alert('login failed!');
         }
-      );
+      ).catch(() => {
+        alert('login failed!');
+      });
     }
   }
 });
